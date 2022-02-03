@@ -25,12 +25,12 @@ def calculate_kinetic_energy(mass, distance, time):
         if mass.unit == "solar-mass":
             # convert from solar mass to kg
             value = mass.value * 1.98892e30 # [kg]
-            mass = Mass(value, 'kg')
+            mass_of_object = Mass(value, 'kg')
         else:
             print ("unit is Unknown")
             return
 
-    kinetic_energy = 0.5 * mass.value * speed_equation ** 2
+    kinetic_energy = 0.5 * mass_of_object.value * speed_equation ** 2
     return kinetic_energy
 
 mass = Mass(2, "solar-mass")
